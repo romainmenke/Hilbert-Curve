@@ -195,4 +195,9 @@ extension Hilbert : CustomPlaygroundQuickLookable {
 }
 
 
-let hilbert = Hilbert.generateCurve(3, count: 100)
+let hilbert = Hilbert.generateCurve(9, count: 1000)
+print(hilbert.curve)
+
+
+
+

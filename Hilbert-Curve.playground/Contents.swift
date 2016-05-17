@@ -155,6 +155,13 @@ struct Hilbert {
         return Hilbert(curve: curve)
     }
     
+    static func generateCurve(n:UInt32) -> Hilbert {
+        
+        let i = pow((4 * Double(n)), 2)
+        
+        return generateCurve(n, count: Int(i))
+    }
+    
     var curve : [(UInt32,UInt32)]
     
     
@@ -195,7 +202,7 @@ extension Hilbert : CustomPlaygroundQuickLookable {
 }
 
 
-let hilbert = Hilbert.generateCurve(9, count: 1000)
+let hilbert = Hilbert.generateCurve(3)
 print(hilbert.curve)
 
 
